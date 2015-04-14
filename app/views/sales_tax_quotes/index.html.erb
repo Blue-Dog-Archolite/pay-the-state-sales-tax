@@ -1,0 +1,20 @@
+<h1> All Requested Rates </h1>
+<ul>
+  <% @quotes.each do |quote|%>
+    <%= link_to(quote) do %>
+      <li>
+        <p>
+          Zip: <%= quote.zip_code %>
+        </p>
+        <p>
+          Country: <%= quote.country_code%>
+        </p>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+
+<div>
+  <%= link_to "New Quote", new_sales_tax_quote_url %>
+</div>
