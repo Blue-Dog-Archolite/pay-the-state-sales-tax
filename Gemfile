@@ -54,6 +54,8 @@ group :development do
 
   gem 'vcr'
 
+  gem 'seed_dump'
+
   gem 'rb-inotify', require: false # linux
 end
 

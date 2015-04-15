@@ -1,19 +1,27 @@
 require 'rails_helper'
 
-RSpec.describe SalesTaxQuoteController, type: :controller do
+RSpec.describe SalesTaxQuotesController, type: :controller do
 
-  describe "GET #country:string" do
+  describe "GET #index" do
     it "returns http success" do
-      get :country:string
+      get :index
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET #state_name:string" do
+  describe "GET #new" do
     it "returns http success" do
-      get :state_name:string
+      get :new
       expect(response).to have_http_status(:success)
     end
   end
 
+  describe "POST #sales_tax_quotes", :vcr do
+    let(:quote) {  { country: 'USA', zip: '83703' } }
+    it 'returns http success' do
+      post :create, sales_tax_quote: quote
+
+      expect(response).to have_http_status(302)
+    end
+  end
 end

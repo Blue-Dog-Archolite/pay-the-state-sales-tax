@@ -17,9 +17,16 @@ ActiveRecord::Schema.define(version: 20150414211620) do
   enable_extension "plpgsql"
 
   create_table "sales_tax_quotes", force: true do |t|
-    t.string   "country_code"
-    t.integer  "zip_code"
-    t.float    "rate"
+    t.string   "state"
+    t.string   "zip"
+    t.float    "state_rate"
+    t.string   "city"
+    t.string   "city_rate"
+    t.string   "country"
+    t.string   "county"
+    t.string   "county_rate"
+    t.string   "combined_district_rate"
+    t.string   "combined_rate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

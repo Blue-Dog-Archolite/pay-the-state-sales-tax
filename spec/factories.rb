@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :sales_tax_quote do
-    country "MyString"
-state_name "MyString"
+    country  "USA"
+    zip      "83702"
   end
-
 end

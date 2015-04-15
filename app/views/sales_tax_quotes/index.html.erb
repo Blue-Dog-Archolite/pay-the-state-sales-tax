@@ -4,16 +4,15 @@
     <%= link_to(quote) do %>
       <li>
         <p>
-          Zip: <%= quote.zip_code %>
+          Zip: <%= quote.zip%>
         </p>
         <p>
-          Country: <%= quote.country_code%>
+          Country: <%= quote.country%>
         </p>
       </li>
     <% end %>
   <% end %>
 </ul>
-
 
 <div>
   <%= link_to "New Quote", new_sales_tax_quote_url %>

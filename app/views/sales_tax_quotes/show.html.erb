@@ -1,0 +1,13 @@
+Sales Tax Quote:
+
+<ul>
+<% @quote.attributes.each  do |key, value|%>
+  <li>
+    <%= key %> : <%= value %>
+  </li>
+<% end %>
+</ul>
+
+<div>
+  <%= link_to "Quotes", sales_tax_quotes_url %>
+</div>

@@ -1,5 +1,6 @@
-<%= form_for :person do |f| %>
-  Country Code: <%= f.text_field :country_code%><br />
-  Zip Code: <%= f.text_field :zip_code%><br />
+<%= form_for :sales_tax_quote, url: {action: "create"} do |f| %>
+  Country Code: <%= f.text_field :country %><br />
+  Zip Code: <%= f.text_field :zip %><br />
   <%= f.submit %>
 <% end %>
+
